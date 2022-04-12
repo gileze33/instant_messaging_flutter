@@ -1,5 +1,3 @@
-import 'package:shared_preferences/shared_preferences.dart';
-
 abstract class SessionService {
   Future<String?> getSessionKey();
   Future<void> saveSessionKey(String sessionKey);
@@ -10,13 +8,12 @@ class SessionServiceImpl extends SessionService {
 
   @override
   Future<String?> getSessionKey() async {
-    final prefs = await SharedPreferences.getInstance();
-    return prefs.getString(_sessionKeyPreference);
+    return null;
   }
 
   @override
   Future<void> saveSessionKey(String sessionKey) async {
-    final prefs = await SharedPreferences.getInstance();
-    prefs.setString(_sessionKeyPreference, sessionKey);
+    // final prefs = await SharedPreferences.getInstance();
+    // prefs.setString(_sessionKeyPreference, sessionKey);
   }
 }

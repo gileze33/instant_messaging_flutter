@@ -37,7 +37,8 @@ Icon?
 
 build/
 .android/
-.ios/
+.ios/*
+!.ios/Podfile
 .flutter-plugins
 .flutter-plugins-dependencies
 
